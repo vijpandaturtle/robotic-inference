@@ -1,0 +1,1 @@
+wget https://www.dropbox.com/s/7ed0rpuu2rc59cw/robotic%20inference%20data.zip?dl=0
