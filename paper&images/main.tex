@@ -16,7 +16,7 @@
 \IEEEtitleabstractindextext{%
 
 \begin{abstract}
-This paper presents a novel use case for GoogLeNet, a popular convolutional network architecture, for classifying fruits. This application forms the basis for a kitchen service robot to develop relevant scene understanding capabilities using deep learning.\end{abstract}
+This paper presents a novel use case for GoogLeNet, a popular convolutional network architecture, for classifying fruits. This application forms the basis for a kitchen service robot to develop relevant scene understanding capabilities using deep learning. The model performs with an accuracy of 50 percent in the above classifiation, which makes it a good candidate for a commercially viable product.\end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
 \begin{IEEEkeywords}
@@ -107,10 +107,10 @@ This data was trained for 30 epochs, with a batch size of 32 and learning rate 0
 \end{figure}
 
 \section{Discussion}
-As one can infer from the above sections, the Fruit classification model has a relaatively low accuracy while training as well as in the testing phase. Hence, there is reason to believe that the model may be overfitting. The reasons for this could be the nature of data set, where all the fruit images consist of a white background and that the training dataset is augmented by rotating the object by a certain angle to create more data. One of the problems with using the GoogLeNet for such a task is that, the nature of this task maybe to simple for such a complex architecture. 
+As one can infer from the above sections, the Fruit classification model has a relaatively low accuracy while training as well as in the testing phase. Hence, there is reason to believe that the model may be overfitting. The reasons for this could be the nature of data set, where all the fruit images consist of a white background and that the training dataset is augmented by rotating the object by a certain angle to create more data. One of the problems with using the GoogLeNet for such a task is that, the nature of this task maybe to simple for such a complex architecture. Also, since this model is to deployed in an indoor environment, the accuracy of this model is more important than the inference timing. In this case, the task isn't urgent in nature so an increase in inference timing won't affect the performance of the product that will eventually use the model.
 
 \section{Conclusion / Future work}
-This Fruit classifier system, was an attempt to making an end-to-end system that can recognize all kinds of different kitchen and food items. This could then be implemented on a kitchen service robot, which gives it full-understanding of the environment around. To extend this project, various aspects can be improved. This may include increasing the number of categories, or getting a different dataset that covers more items to be classified Another option may be to choose a different network architecture for the following architecture which might be better suited to the purpose. 
+This Fruit classifier system, was an attempt to making an end-to-end system that can recognize all kinds of different kitchen and food items. This could then be implemented on a kitchen service robot, which gives it full-understanding of the environment around. This product can be made commercially viable, but with some changes to the model which may improve the overall accuracy. To extend this project, various aspects can be improved. This may include increasing the number of categories, or getting a different dataset that covers more items to be classified Another option may be to choose a different network architecture for the following architecture which might be better suited to the purpose. 
 
 
 \bibliography{ref}
