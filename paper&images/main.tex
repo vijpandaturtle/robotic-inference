@@ -56,7 +56,9 @@ GoogLeNet inception modules consist of convolutional, maxpooling as well as aver
 
 
 \section{Data Acquisition}
-The data set used in this paper is a subset of the Fruits360 data set available on Kaggle. While the original data set consists of 60 fruits and 38409 images, the classification task used 4 classes with around 440-500 images each for training and validation and 4 images per class for testing. The training data was further split into separate training and validation sets by the DIGITS interface. The categories in  the dataset are Banana, Plum, Strawberry and Papaya. A few sample images from the data set are shown in fig 3.
+The data set used in this paper is a subset of the Fruits360 data set available on Kaggle. While the original data set consists of 60 fruits and 38409 images, the classification task used 4 classes with around 440-500 images each for training and validation. The training data was further split into separate training and validation sets by the DIGITS interface.
+The testing images were collected from Google Images and consisted of 4 images per class.
+The categories in  the dataset are Banana, Plum, Strawberry and Papaya. A few sample images from the data set are shown in fig 3, whereas the sample images from the testing set can be seen in fig 6.
 
 %example for inserting image
 \begin{figure}[thpb]
@@ -94,18 +96,18 @@ The average inference time of the model is 5ms which is sufficiently high to be 
 
 
 \subsection{Fruit Classification Data}
-This data was trained for 30 epochs, with a batch size of 8 and learning rate 0.01. The model achieved a training accuracy of over 99 percent, and classified all the 16 test images correctly with a 100 percent confidence score. Results of the DIGITS classify command for the testing data can be seen below in fig 6.
+This data was trained for 30 epochs, with a batch size of 32 and learning rate 0.01. The training accuracy of the model was nearly 70 percent. But, model achieved a training accuracy of only 50, which means it misclassified half the images, and the confidence score of the correctly classified images was only a little above 35 percent.
 
 %example for inserting image
 \begin{figure}[tbhp]
       \centering
-      \includegraphics[width=\linewidth]{ownres.jpg}
-      \caption{Sample data set images.}
+      \includegraphics[width=\linewidth]{own_img.png}
+      \caption{Sample testing images.}
       \label{fig:robot1}
 \end{figure}
 
 \section{Discussion}
-As one can infer from the above sections, the Fruit classification model has quite a high accuracy while training as well as in the testing phase. However, there is reason to believe that the model may be overfitting. The reasons for this could be the nature of data set, where all the fruit images consist of a white background and that the training dataset is augmented by rotating the object by a certain angle to create more data. One of the problems with using the GoogLeNet for such a task is that, the nature of this task maybe to simple for such a complex architecture. 
+As one can infer from the above sections, the Fruit classification model has a relaatively low accuracy while training as well as in the testing phase. Hence, there is reason to believe that the model may be overfitting. The reasons for this could be the nature of data set, where all the fruit images consist of a white background and that the training dataset is augmented by rotating the object by a certain angle to create more data. One of the problems with using the GoogLeNet for such a task is that, the nature of this task maybe to simple for such a complex architecture. 
 
 \section{Conclusion / Future work}
 This Fruit classifier system, was an attempt to making an end-to-end system that can recognize all kinds of different kitchen and food items. This could then be implemented on a kitchen service robot, which gives it full-understanding of the environment around. To extend this project, various aspects can be improved. This may include increasing the number of categories, or getting a different dataset that covers more items to be classified Another option may be to choose a different network architecture for the following architecture which might be better suited to the purpose. 
